@@ -29,3 +29,32 @@ func main() {
 }
 ```
 
+The results printed (after cleaning up):
+
+
+```javascript
+{
+	"emeter": {
+		"get_realtime": {
+			"current": 0.015135,
+			"voltage": 296.213416,
+			"power": 1.193017,
+			"total": 0.061,
+			"err_code": 0
+		},
+		"get_vgain_igain": {
+			"vgain": 16566,
+			"igain": 13042,
+			"err_code": 0
+		}
+	}
+}
+```
+
+Functions include:
+
+- TurnOn() -- turning on the power on the plug
+- TurnOff() -- turning off the power on the plug
+- SystemInfo() -- getting information on the plug
+- MeterInfo() -- metering info on the plug, including the current, voltage, power and the total power consumption till date, as well as the vgain and igain
+- DailyStats(month, year) -- energy consumed per day for the given month and year
