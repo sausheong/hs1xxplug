@@ -38,7 +38,7 @@ func (p *Hs1xxPlug) SystemInfo() (results string, err error) {
 }
 
 func (p *Hs1xxPlug) MeterInfo() (results string, err error) {
-	json := `{"emeter":{"get_realtime":{},"get_vgain_igain":{}}}`
+	json := `{"system":{"get_sysinfo":{}}, "emeter":{"get_realtime":{},"get_vgain_igain":{}}}`
 	data := encrypt(json)
 	reading, err := send(p.IPAddress, data)
 	if err == nil {
